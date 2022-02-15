@@ -1,0 +1,27 @@
+[
+    {
+        "key": "01",
+        "title": "No use",
+        "value": "1"
+    },
+    {
+        "key": "02",
+        "title": "Less Important",
+        "value": "2"
+    },
+    {
+        "key": "03",
+        "title": "Nice to have",
+        "value": "3"
+    },
+    {
+        "key": "04",
+        "title": "Important",
+        "value": "4"
+    },
+    {
+        "key": "05",
+        "title": "Critical",
+        "value": "5"
+    }
+]
