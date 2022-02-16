@@ -5,32 +5,6 @@
       "questions": [
         {
           "id": "PMC-01",
-          "title": "Question 111111111"
-        },
-        {
-          "id": "PMC-02",
-          "title": "Question 2"
-        },
-        {
-          "id": "PMC-03",
-          "title": "Question 3"
-        },
-        {
-          "id": "PMC-04",
-          "title": "Question 4"
-        },
-        {
-          "id": "PMC-05",
-          "title": "Question 5"
-        }
-      ]
-    },
-    {
-      "section": "QSN",
-      "title": "Project Management & Controls",
-      "questions": [
-        {
-          "id": "PMC-01",
           "title": "Question 1"
         },
         {
@@ -52,157 +26,183 @@
       ]
     },
     {
-      "section": "ASDS",
-      "title": "Project Management & Controls",
+      "section": "DCR",
+      "title": "Design & Constructability Reviews",
       "questions": [
         {
-          "id": "PMC-01",
+          "id": "DCR-01",
           "title": "Question 1"
         },
         {
-          "id": "PMC-02",
+          "id": "DCR-02",
           "title": "Question 2"
         },
         {
-          "id": "PMC-03",
+          "id": "DCR-03",
           "title": "Question 3"
         },
         {
-          "id": "PMC-04",
+          "id": "DCR-04",
           "title": "Question 4"
         },
         {
-          "id": "PMC-05",
+          "id": "DCR-05",
           "title": "Question 5"
         }
       ]
     },
     {
-      "section": "IUY",
-      "title": "Project Management & Controls",
+      "section": "CC",
+      "title": "Collaboration & coordination",
       "questions": [
         {
-          "id": "PMC-01",
+          "id": "CC-01",
           "title": "Question 1"
         },
         {
-          "id": "PMC-02",
+          "id": "CC-02",
           "title": "Question 2"
         },
         {
-          "id": "PMC-03",
+          "id": "CC-03",
           "title": "Question 3"
         },
         {
-          "id": "PMC-04",
+          "id": "CC-04",
           "title": "Question 4"
         },
         {
-          "id": "PMC-05",
+          "id": "CC-05",
           "title": "Question 5"
         }
       ]
     },
     {
-      "section": "PMN",
-      "title": "Project Management & Controls",
+      "section": "CM",
+      "title": "Cost Management",
       "questions": [
         {
-          "id": "PMC-01",
+          "id": "CM-01",
           "title": "Question 1"
         },
         {
-          "id": "PMC-02",
+          "id": "CM-02",
           "title": "Question 2"
         },
         {
-          "id": "PMC-03",
+          "id": "CM-03",
           "title": "Question 3"
         },
         {
-          "id": "PMC-04",
+          "id": "CM-04",
           "title": "Question 4"
         },
         {
-          "id": "PMC-05",
+          "id": "CM-05",
           "title": "Question 5"
         }
       ]
     },
     {
-      "section": "PTY",
-      "title": "Project Management & Controls",
+      "section": "RD",
+      "title": "Reporting & Dashboards",
       "questions": [
         {
-          "id": "PMC-01",
+          "id": "RD-01",
           "title": "Question 1"
         },
         {
-          "id": "PMC-02",
+          "id": "RD-02",
           "title": "Question 2"
         },
         {
-          "id": "PMC-03",
+          "id": "RD-03",
           "title": "Question 3"
         },
         {
-          "id": "PMC-04",
+          "id": "RD-04",
           "title": "Question 4"
         },
         {
-          "id": "PMC-05",
+          "id": "RD-05",
           "title": "Question 5"
         }
       ]
     },
     {
-      "section": "AWE",
-      "title": "Project Management & Controls",
+      "section": "QSM",
+      "title": "Quality & Safety Management",
       "questions": [
         {
-          "id": "PMC-01",
+          "id": "QSM-01",
           "title": "Question 1"
         },
         {
-          "id": "PMC-02",
+          "id": "QSM-02",
           "title": "Question 2"
         },
         {
-          "id": "PMC-03",
+          "id": "QSM-03",
           "title": "Question 3"
         },
         {
-          "id": "PMC-04",
+          "id": "QSM-04",
           "title": "Question 4"
         },
         {
-          "id": "PMC-05",
+          "id": "QSM-05",
           "title": "Question 5"
         }
       ]
     },
     {
-      "section": "TYB",
-      "title": "Project Management & Controls",
+      "section": "SC",
+      "title": "Setup & configuration",
       "questions": [
         {
-          "id": "PMC-01",
+          "id": "SC-01",
           "title": "Question 1"
         },
         {
-          "id": "PMC-02",
+          "id": "SC-02",
           "title": "Question 2"
         },
         {
-          "id": "PMC-03",
+          "id": "SC-03",
           "title": "Question 3"
         },
         {
-          "id": "PMC-04",
+          "id": "SC-04",
           "title": "Question 4"
         },
         {
-          "id": "PMC-05",
+          "id": "SC-05",
+          "title": "Question 5"
+        }
+      ]
+    },
+    {
+      "section": "SUP",
+      "title": "Support",
+      "questions": [
+        {
+          "id": "SUP-01",
+          "title": "Question 1"
+        },
+        {
+          "id": "SUP-02",
+          "title": "Question 2"
+        },
+        {
+          "id": "SUP-03",
+          "title": "Question 3"
+        },
+        {
+          "id": "SUP-04",
+          "title": "Question 4"
+        },
+        {
+          "id": "SUP-05",
           "title": "Question 5"
         }
       ]

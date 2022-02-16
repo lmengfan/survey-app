@@ -11,6 +11,7 @@ import Radio from '@mui/material/Radio';
 import Box from '@mui/material/Box';
 import { getValue } from '@testing-library/user-event/dist/utils';
 import Line from'../line';
+import BlockGrid from'../block';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -32,24 +33,12 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
-
 export default function CustomizedTables(props) {
 
   return (
-    <div>
+    <div key="sections">
     {props.questions.map((h) => (
-    <Box sx={{ width: '100%' }} key={h.section + "box"}>
+    <Box sx={{ width: '100%' }} key={h.section}>
     <h3 key={h.section + "head"}>{h.title}</h3>
     <TableContainer component={Paper} key={h.section + "tc"}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -57,19 +46,12 @@ export default function CustomizedTables(props) {
           <TableRow>
           <StyledTableCell align="center">Questions</StyledTableCell>
           {props.answer.map((h) => (
-            <StyledTableCell align="center">{h.title}</StyledTableCell>
+            <StyledTableCell align="center" key={h.title}>{h.title}</StyledTableCell>
           ))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {h.questions.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.title}
-              </StyledTableCell>
-                <Line question={h} answer={props.answer}/>
-            </StyledTableRow>
-          ))}
+          <BlockGrid section={h} questions={h.questions} answer={props.answer}/>
         </TableBody>
       </Table>
     </TableContainer>
