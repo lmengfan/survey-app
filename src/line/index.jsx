@@ -14,7 +14,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export default function Line(props) {
-  const [selectedValue, setSelectedValue] = React.useState("0");
+  const [selectedValue, setSelectedValue] = React.useState(-1);
 
   const handleChange = (event) => {
    setSelectedValue(event.currentTarget.querySelector('input').value);

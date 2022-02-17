@@ -11,6 +11,11 @@ import Radio from '@mui/material/Radio';
 import Box from '@mui/material/Box';
 import { getValue } from '@testing-library/user-event/dist/utils';
 import Line from'../line';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import BlockGrid from'../block';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -45,33 +50,51 @@ export default function CustomizedTables(props) {
     props.getScore(blockAnswers)
   }
 
+  const [expanded, setExpanded] = React.useState('panel1');
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   return (
     <div key="sections">
     {props.questions.map((h) => (
-    <Box sx={{ width: '100%' }} key={h.section}>
-    <h3 key={h.section + "head"}>{h.title}</h3>
-    <TableContainer component={Paper} key={h.section + "tc"}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-          <StyledTableCell align="center">Questions</StyledTableCell>
-          {props.answer.map((h) => (
-            <StyledTableCell align="center" key={h.title}>{h.title}</StyledTableCell>
-          ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          <BlockGrid section={h} 
-                    questions={h.questions} 
-                    answer={props.answer} 
-                    recordBlockAnswers={recordAnswerBlockCallback} 
-                    questionWeight={props.questionWeight} 
-                    overallWeight={props.overallWeight}
-                    solutionScore={props.solutionScore}/>
-        </TableBody>
-      </Table>
-    </TableContainer>
-    </Box>))}
+    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} key={h.section}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>{h.title}</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <TableContainer component={Paper} key={h.section + "tc"}>
+          <Table sx={{ minWidth: 600 }} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+              <StyledTableCell align="center">Questions</StyledTableCell>
+              {props.answer.map((h) => (
+                <StyledTableCell align="center" key={h.title}>{h.title}</StyledTableCell>
+              ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <BlockGrid section={h} 
+                        questions={h.questions} 
+                        answer={props.answer} 
+                        recordBlockAnswers={recordAnswerBlockCallback} 
+                        questionWeight={props.questionWeight} 
+                        overallWeight={props.overallWeight}
+                        solutionScore={props.solutionScore}/>
+            </TableBody>
+          </Table>
+        </TableContainer>
+        </AccordionDetails>
+      </Accordion>
+
+
+    // </Box>
+    ))}
     </div>
   );
 }

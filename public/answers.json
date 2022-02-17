@@ -2,26 +2,26 @@
     {
         "key": "01",
         "title": "No use",
-        "value": "1"
+        "value": "0"
     },
     {
         "key": "02",
         "title": "Less Important",
-        "value": "2"
+        "value": "1"
     },
     {
         "key": "03",
         "title": "Nice to have",
-        "value": "3"
+        "value": "2"
     },
     {
         "key": "04",
         "title": "Important",
-        "value": "4"
+        "value": "3"
     },
     {
         "key": "05",
         "title": "Critical",
-        "value": "5"
+        "value": "4"
     }
 ]

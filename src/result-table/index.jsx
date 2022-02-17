@@ -9,9 +9,14 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TableFooter from '@mui/material/TableFooter';
 import { createTheme } from '@mui/material/styles';
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import PropTypes from 'prop-types';
 import "./styles.css";
-import { maxHeight } from '@mui/system';
 
+import { maxHeight } from '@mui/system';
 const customTheme = createTheme({
   palette: {
     primary: {
@@ -28,6 +33,89 @@ const customTheme = createTheme({
     },
   },
 });
+function CircularProgressWithLabel(props) {
+  if(Math.round(props.value) < 33){
+    return (
+      <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+        <CircularProgress variant="determinate" {...props} color="error" />
+        <Box
+          sx={{
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            position: 'absolute',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Typography variant="caption" component="div" color="error">
+            {`${Math.round(props.value)}`}
+          </Typography>
+        </Box>
+      </Box>
+    );
+  }
+  else if(Math.round(props.value) < 66){    
+    return (
+    <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+      <CircularProgress variant="determinate" {...props} color="warning" />
+      <Box
+        sx={{
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          position: 'absolute',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Typography variant="caption" component="div" color="warning">
+          {`${Math.round(props.value)}`}
+        </Typography>
+      </Box>
+    </Box>
+  );
+}
+else{
+  return (
+    <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+      <CircularProgress variant="determinate" {...props} color="success" />
+      <Box
+        sx={{
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          position: 'absolute',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Typography variant="caption" component="div" color="success">
+          {`${Math.round(props.value)}`}
+        </Typography>
+      </Box>
+    </Box>
+  );
+}
+
+}
+
+CircularProgressWithLabel.propTypes = {
+  /**
+   * The value of the progress indicator for the determinate variant.
+   * Value between 0 and 100.
+   * @default 0
+   */
+  value: PropTypes.number.isRequired,
+};
+
+
 
 const StyledWinnerCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -82,28 +170,28 @@ function StyledHeading(props) {
 function NormalBody(props) {
   return (              
     <NormalCell align="center">
-    {Math.round(props.row[props.column.col]*5)}
+      <CircularProgressWithLabel  variant="determinate" value={Math.round((props.row[props.column.col]**0.5)*25)} />
     </NormalCell>)
 }
 
 function StyledBody(props) {
   return (              
     <StyledWinnerCell className= "winnertb" align="center">
-    {Math.round(props.row[props.column.col]*5)}
+      <CircularProgressWithLabel  variant="determinate" value={Math.round((props.row[props.column.col]**0.5)*25)} />
     </StyledWinnerCell>)
 }
 
 function NormalFoot(props) {
   return (              
     <NormalCell align="center">
-    {Math.round(props.row[props.column.col]*5)}
+      <CircularProgressWithLabel  variant="determinate" value={Math.round((props.row[props.column.col]**0.5)*25)} />
     </NormalCell>)
 }
 
 function StyledFoot(props) {
   return (              
     <StyledWinnerCell className= "winnertf" align="center">
-    {Math.round(props.row[props.column.col]*5)}
+      <CircularProgressWithLabel  variant="determinate" value={Math.round((props.row[props.column.col]**0.5)*25)} />
     </StyledWinnerCell>)
 }
 

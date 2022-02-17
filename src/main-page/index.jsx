@@ -12,10 +12,11 @@ import Radio from '@mui/material/Radio';
 import RadioButtons from '../radio';
 import BasicTable from '../result-table';
 
+//create your forceUpdate hook
+
 function App() {
   //Load Questions for form
   const [allSections, setAllSections] = useState([]);
-  const [visible, setVisible] = useState(false);  // result visibility state
 
   useEffect(() => {
     const fetchSections = async () => {
@@ -48,7 +49,6 @@ function App() {
       setQuestionWeight(qWeight);
     };
     fetchQuestionWeight();
-    console.log(questionWeight);
   }, []);
   
 
@@ -62,7 +62,6 @@ function App() {
       setOverallWeight(oWeight);
     };
     fetchOverallWeight();
-    console.log(overallWeight);
   }, []);
 
   // Load overall weight for calculation
@@ -95,9 +94,13 @@ function App() {
     setBlockAnswers(childData)
   }
 
+  const [va, setValue] = useState(0); // integer state
+  const [visible, setVisible] = useState(false);  // result visibility state
   const handleSubmit = (event) => {
     setVisible(true)
+    setValue(va => va + 1)
   };
+
   return (
     //<BrowserRouter basename = {process.env.PUBLIC_URL}>
     <div>
@@ -121,8 +124,12 @@ function App() {
             </Box>
             <CustomizedTables questions = {allSections} answer={answers} questionWeight={questionWeight} overallWeight={overallWeight} solutionScore={solutionScore} getScore={recordScoreCallback}/>
             <IconLabelButtons showresult={handleSubmit}/>
-            {visible && <BasicTable columnhead={logos} section ={allSections} rowdata={blockAnswers} />}
+            
           </main>
+          {visible && 
+          <result>
+            <BasicTable columnhead={logos} section ={allSections} rowdata={blockAnswers} />
+          </result>}
       </div>
     //</BrowserRouter>
   );
