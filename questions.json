@@ -36,18 +36,6 @@
         {
           "id": "DCR-02",
           "title": "Question 2"
-        },
-        {
-          "id": "DCR-03",
-          "title": "Question 3"
-        },
-        {
-          "id": "DCR-04",
-          "title": "Question 4"
-        },
-        {
-          "id": "DCR-05",
-          "title": "Question 5"
         }
       ]
     },
@@ -66,14 +54,6 @@
         {
           "id": "CC-03",
           "title": "Question 3"
-        },
-        {
-          "id": "CC-04",
-          "title": "Question 4"
-        },
-        {
-          "id": "CC-05",
-          "title": "Question 5"
         }
       ]
     },
@@ -114,18 +94,6 @@
         {
           "id": "RD-02",
           "title": "Question 2"
-        },
-        {
-          "id": "RD-03",
-          "title": "Question 3"
-        },
-        {
-          "id": "RD-04",
-          "title": "Question 4"
-        },
-        {
-          "id": "RD-05",
-          "title": "Question 5"
         }
       ]
     },
@@ -144,14 +112,6 @@
         {
           "id": "QSM-03",
           "title": "Question 3"
-        },
-        {
-          "id": "QSM-04",
-          "title": "Question 4"
-        },
-        {
-          "id": "QSM-05",
-          "title": "Question 5"
         }
       ]
     },
@@ -178,6 +138,10 @@
         {
           "id": "SC-05",
           "title": "Question 5"
+        },
+        {
+          "id": "SC-06",
+          "title": "Question 6"
         }
       ]
     },
@@ -196,14 +160,6 @@
         {
           "id": "SUP-03",
           "title": "Question 3"
-        },
-        {
-          "id": "SUP-04",
-          "title": "Question 4"
-        },
-        {
-          "id": "SUP-05",
-          "title": "Question 5"
         }
       ]
     }

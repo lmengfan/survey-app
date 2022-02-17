@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/survey-app/static/css/main.9bd2ab6b.css",
-    "main.js": "/survey-app/static/js/main.b5c8c08f.js",
+    "main.css": "/survey-app/static/css/main.6aba3d4c.css",
+    "main.js": "/survey-app/static/js/main.9a663ad4.js",
     "static/js/787.a2c02b2c.chunk.js": "/survey-app/static/js/787.a2c02b2c.chunk.js",
     "static/media/logo.svg": "/survey-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/survey-app/index.html",
-    "main.9bd2ab6b.css.map": "/survey-app/static/css/main.9bd2ab6b.css.map",
-    "main.b5c8c08f.js.map": "/survey-app/static/js/main.b5c8c08f.js.map",
+    "main.6aba3d4c.css.map": "/survey-app/static/css/main.6aba3d4c.css.map",
+    "main.9a663ad4.js.map": "/survey-app/static/js/main.9a663ad4.js.map",
     "787.a2c02b2c.chunk.js.map": "/survey-app/static/js/787.a2c02b2c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bd2ab6b.css",
-    "static/js/main.b5c8c08f.js"
+    "static/css/main.6aba3d4c.css",
+    "static/js/main.9a663ad4.js"
   ]
 }
