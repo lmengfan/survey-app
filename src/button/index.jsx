@@ -2,8 +2,8 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
-
-export default function IconLabelButtons() {
+import "./styles.css";
+export default function IconLabelButtons(props) {
   const handleClick = (event) => {
 
     let total = 0;
@@ -17,8 +17,8 @@ export default function IconLabelButtons() {
    };
    
   return (
-    <Stack direction="row" spacing={2}>
-      <Button variant="contained"  endIcon={<SendIcon/>} onClick={handleClick}>
+    <Stack direction="row" spacing={2} className="submit-button">
+      <Button  variant="contained"  endIcon={<SendIcon/>} onClick={props.showresult}>
         Submit
       </Button>
     </Stack>

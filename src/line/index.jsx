@@ -12,11 +12,13 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     fontSize: 14,
   },
 }));
+
 export default function Line(props) {
   const [selectedValue, setSelectedValue] = React.useState("0");
 
   const handleChange = (event) => {
    setSelectedValue(event.currentTarget.querySelector('input').value);
+   props.recordAnswers({question:event.currentTarget.querySelector('input').name, value:event.currentTarget.querySelector('input').value})
   };
 
   return (
@@ -24,11 +26,11 @@ export default function Line(props) {
       {props.answer.map((a) => (
           <StyledTableCell align="center" key={props.question.id + String(a.value)}>
           <Radio
-          checked={selectedValue === a.value}
-          onClick={handleChange}
-          key={props.question.id + String(a.value)}
-          value={a.value}
-          name="answer-radio"
+            checked={selectedValue === a.value}
+            onClick={handleChange}
+            key={props.question.id + String(a.value)}
+            value={a.value}
+            name={props.name}
           />
           </StyledTableCell>
       ))}

@@ -35,6 +35,16 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function CustomizedTables(props) {
 
+  const [blockAnswers, setBlockAnswers] = React.useState(new Map());
+
+  const recordAnswerBlockCallback = (childData) =>{
+    const collection = blockAnswers;
+    collection.set(childData.section, childData.answers)
+    //console.log(collection)
+    setBlockAnswers(collection)
+    props.getScore(blockAnswers)
+  }
+
   return (
     <div key="sections">
     {props.questions.map((h) => (
@@ -51,7 +61,13 @@ export default function CustomizedTables(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          <BlockGrid section={h} questions={h.questions} answer={props.answer}/>
+          <BlockGrid section={h} 
+                    questions={h.questions} 
+                    answer={props.answer} 
+                    recordBlockAnswers={recordAnswerBlockCallback} 
+                    questionWeight={props.questionWeight} 
+                    overallWeight={props.overallWeight}
+                    solutionScore={props.solutionScore}/>
         </TableBody>
       </Table>
     </TableContainer>
