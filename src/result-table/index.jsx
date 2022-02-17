@@ -15,8 +15,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import "./styles.css";
+import { StyledEngineProvider } from '@mui/material/styles';
 
-import { maxHeight } from '@mui/system';
 const customTheme = createTheme({
   palette: {
     primary: {
@@ -34,56 +34,18 @@ const customTheme = createTheme({
   },
 });
 function CircularProgressWithLabel(props) {
+  let circleColor = "error"
   if(Math.round(props.value) < 33){
-    return (
-      <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-        <CircularProgress variant="determinate" {...props} color="error" />
-        <Box
-          sx={{
-            top: 0,
-            left: 0,
-            bottom: 0,
-            right: 0,
-            position: 'absolute',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography variant="caption" component="div" color="error">
-            {`${Math.round(props.value)}`}
-          </Typography>
-        </Box>
-      </Box>
-    );
+    circleColor = "error"}
+  else if(Math.round(props.value) < 66){ 
+    circleColor = "error"
   }
-  else if(Math.round(props.value) < 66){    
-    return (
-    <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" {...props} color="warning" />
-      <Box
-        sx={{
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-          position: 'absolute',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <Typography variant="caption" component="div" color="warning">
-          {`${Math.round(props.value)}`}
-        </Typography>
-      </Box>
-    </Box>
-  );
-}
-else{
+  else{
+    circleColor="success" 
+  }
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" {...props} color="success" />
+      <CircularProgress variant="determinate" {...props} color={circleColor} />
       <Box
         sx={{
           top: 0,
@@ -94,16 +56,13 @@ else{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-        }}
-      >
-        <Typography variant="caption" component="div" color="success">
+        }}>
+        <Typography variant="caption" component="div" color={circleColor}>
           {`${Math.round(props.value)}`}
         </Typography>
       </Box>
     </Box>
   );
-}
-
 }
 
 CircularProgressWithLabel.propTypes = {
@@ -121,7 +80,7 @@ const StyledWinnerCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: customTheme.palette.primary.light,
     color: theme.palette.common.white,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   [`&.${tableCellClasses.body}`]: {
     backgroundColor: theme.palette.common.white,
@@ -161,10 +120,13 @@ function NormalHeading(props) {
 }
 
 function StyledHeading(props) {
-  return (              
+  return (
+  <StyledEngineProvider injectFirst>              
   <StyledWinnerCell align="center" className= "winnerth" key = {props.column.col}>
   <img className="logo" key = {props.column.col} alt={props.column.col} src={props.column.img}></img>
-  </StyledWinnerCell>)
+  </StyledWinnerCell>
+  </StyledEngineProvider>
+  )
 }
 
 function NormalBody(props) {
@@ -189,10 +151,12 @@ function NormalFoot(props) {
 }
 
 function StyledFoot(props) {
-  return (              
+  return (       
+    <StyledEngineProvider injectFirst>         
     <StyledWinnerCell className= "winnertf" align="center">
       <CircularProgressWithLabel  variant="determinate" value={Math.round((props.row[props.column.col]**0.5)*25)} />
-    </StyledWinnerCell>)
+    </StyledWinnerCell>
+    </StyledEngineProvider>)
 }
 
 function Head(props) {
@@ -223,7 +187,6 @@ export default function BasicTable(props) {
   const footer = [];
   for (let i = 0, len = props.section.length; i < len; i++) {
     let section = props.section[i].section
-    let title = props.section[i].title
     //console.log(props.rowdata)
     if(Array.from(props.rowdata.keys()).includes(section)){
       rows.push(Object.fromEntries(props.rowdata.get(section).score))
@@ -252,7 +215,8 @@ export default function BasicTable(props) {
   console.log("Winner" + winner)
   //console.log(rows)
   return (
-    <TableContainer component={Paper}>
+    
+      <TableContainer component={Paper}>
       <Table sx={{ minwidth: 850, maxHeight: 200}} aria-label="simple table">
         <TableHead>
           <TableRow >
@@ -289,5 +253,6 @@ export default function BasicTable(props) {
         </TableFooter>
       </Table>
     </TableContainer>
+   
   );
 }

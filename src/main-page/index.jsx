@@ -17,10 +17,10 @@ import BasicTable from '../result-table';
 function App() {
   //Load Questions for form
   const [allSections, setAllSections] = useState([]);
-
+  const modifier = "survey-app"//change this to . to deploy to github
   useEffect(() => {
     const fetchSections = async () => {
-      const rsp = await fetch("survey-app/questions.json");
+      const rsp = await fetch(modifier + "/questions.json");
       const sections = await rsp.json();
       setAllSections(sections);
     };
@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     const fetchAnswers = async () => {
-      const rspa = await fetch("survey-app/answers.json");
+      const rspa = await fetch(modifier + "/answers.json");
       const answers = await rspa.json();
       setAnswers(answers);
     };
@@ -44,7 +44,7 @@ function App() {
 
   useEffect(() => {
     const fetchQuestionWeight = async () => {
-      const rspq = await fetch("survey-app/question_weight.json");
+      const rspq = await fetch(modifier + "/question_weight.json");
       const qWeight = await rspq.json();
       setQuestionWeight(qWeight);
     };
@@ -57,7 +57,7 @@ function App() {
 
   useEffect(() => {
     const fetchOverallWeight = async () => {
-      const rspo = await fetch("survey-app/overall_weight.json");
+      const rspo = await fetch(modifier + "/overall_weight.json");
       const oWeight = await rspo.json();
       setOverallWeight(oWeight);
     };
@@ -69,7 +69,7 @@ function App() {
 
   useEffect(() => {
     const fetchSolutionScore = async () => {
-      const rsps = await fetch("survey-app/solution_score.json");
+      const rsps = await fetch(modifier + "/solution_score.json");
       const sScore = await rsps.json();
       setsolutionScore(sScore);
     };
@@ -81,7 +81,7 @@ function App() {
 
   useEffect(() => {
     const fetchLogos = async () => {
-      const rsps = await fetch("survey-app/logos.json");
+      const rsps = await fetch(modifier + "/logos.json");
       const sLogo = await rsps.json();
       setLogos(sLogo);
     };
@@ -102,8 +102,7 @@ function App() {
   };
 
   return (
-    //<BrowserRouter basename = {process.env.PUBLIC_URL}>
-    <div>
+    <BrowserRouter basename = {process.env.PUBLIC_URL}>
       <ResponsiveAppBar/>
          <main>
             <header>
@@ -130,8 +129,7 @@ function App() {
           <result>
             <BasicTable columnhead={logos} section ={allSections} rowdata={blockAnswers} />
           </result>}
-      </div>
-    //</BrowserRouter>
+    </BrowserRouter>
   );
 }
 

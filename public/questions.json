@@ -5,23 +5,23 @@
       "questions": [
         {
           "id": "PMC-01",
-          "title": "Question 1"
+          "title": "It is important to be able to track progress on deliverables across teams for transparency & accountability."
         },
         {
           "id": "PMC-02",
-          "title": "Question 2"
+          "title": "I need to be able to assign specific action items to users, roles or companies and track progress of items within my meeting minutes."
         },
         {
           "id": "PMC-03",
-          "title": "Question 3"
+          "title": "I need to create meetings and agenda items, invite participants and track meeting minutes."
         },
         {
           "id": "PMC-04",
-          "title": "Question 4"
+          "title": "The system must be able to create, assign and manage RFIs, including workflow routing and visibility into status and approvals and create a complete audit trail."
         },
         {
           "id": "PMC-05",
-          "title": "Question 5"
+          "title": "The system must be able to review, approval and distribution workflows for Submittal packages, Assign project team members to submit information to Submittals package, Create Submittal packages, Batch upload and update multiple files in one go."
         }
       ]
     },
@@ -31,11 +31,11 @@
       "questions": [
         {
           "id": "DCR-01",
-          "title": "Question 1"
+          "title": "The system must create issues and assign to team members to resolve design problems or clarify information, maintain a complete audit trail of Issues and pin issues to 2D or 3D design locations."
         },
         {
           "id": "DCR-02",
-          "title": "Question 2"
+          "title": "The system must be able to complete drawing mark ups and is able to add shapes or text notes to 2D or 3D files, and keep private or share with other team members, add hyperlinks to other designs, or to files with additional information or context like photos, RFIs or specs and Add linear, angle or area measurements to aid in the review of designs."
         }
       ]
     },
@@ -45,15 +45,15 @@
       "questions": [
         {
           "id": "CC-01",
-          "title": "Question 1"
+          "title": "BIM is an important part of this project and all stakeholders have a BIM deliverable in their contract."
         },
         {
           "id": "CC-02",
-          "title": "Question 2"
+          "title": "The is a BIM project that is aligned to the PAS, ISO or BS standards and needs a compliant CDE."
         },
         {
           "id": "CC-03",
-          "title": "Question 3"
+          "title": "The system must have a live online 3D viewer."
         }
       ]
     },
@@ -63,23 +63,23 @@
       "questions": [
         {
           "id": "CM-01",
-          "title": "Question 1"
+          "title": "All budgets and contracts need to be managed within the system. The system must be able to create, edit and view all suppliers’ contracts."
         },
         {
           "id": "CM-02",
-          "title": "Question 2"
+          "title": "The system must be able to view variances between budget and cost items."
         },
         {
           "id": "CM-03",
-          "title": "Question 3"
+          "title": "The system must manage all aspects of the change order process including potential change orders, requests for change, owner change orders, requests for quotation & sub-contract change orders."
         },
         {
           "id": "CM-04",
-          "title": "Question 4"
+          "title": "Change orders must have an automatically generate documentation for all parts of the change order process and create project level markup configurations."
         },
         {
           "id": "CM-05",
-          "title": "Question 5"
+          "title": "The system must track both pending and completed supplier payments against the total work to be completed."
         }
       ]
     },
@@ -89,11 +89,11 @@
       "questions": [
         {
           "id": "RD-01",
-          "title": "Question 1"
+          "title": "The system must provide a customizable project dashboard to access important, relevant, and actionable information from across projects and sites."
         },
         {
           "id": "RD-02",
-          "title": "Question 2"
+          "title": "The system must be able to report and track all activity in a single dashboard,"
         }
       ]
     },
@@ -103,15 +103,15 @@
       "questions": [
         {
           "id": "QSM-01",
-          "title": "Question 1"
+          "title": "The system needs to create or import checklists to support quality and safety inspections, and punch lists."
         },
         {
           "id": "QSM-02",
-          "title": "Question 2"
+          "title": "The system needs to create issues and have checklists that are available on Web or mobile devices, for online or offline use; sync to the cloud when online."
         },
         {
           "id": "QSM-03",
-          "title": "Question 3"
+          "title": "The system needs to assign checklists or individual checklist sections to project teams, including due date, Pin site issues to 2D or 3D design locations."
         }
       ]
     },
@@ -121,27 +121,27 @@
       "questions": [
         {
           "id": "SC-01",
-          "title": "Question 1"
+          "title": "The system must update drawing title block names and attributes based on CDE status (WIP, Shared or Approved)."
         },
         {
           "id": "SC-02",
-          "title": "Question 2"
+          "title": "The system must organize and manage specific versions of documents into packages for a specific purpose during the project lifecycle without duplication."
         },
         {
           "id": "SC-03",
-          "title": "Question 3"
+          "title": "The system must have all content fully searchable based on file names and associated meta data."
         },
         {
           "id": "SC-04",
-          "title": "Question 4"
+          "title": "The system must have a server located in a specific area, region or country."
         },
         {
           "id": "SC-05",
-          "title": "Question 5"
+          "title": "The system must have granular permission controls based on a user, role or company level and have central management of all users, roles & companies."
         },
         {
           "id": "SC-06",
-          "title": "Question 6"
+          "title": "The system must automate review & approval workflows based on pre-defined templates."
         }
       ]
     },
@@ -151,15 +151,15 @@
       "questions": [
         {
           "id": "SUP-01",
-          "title": "Question 1"
+          "title": "The system must have an API to allow for the exchange of information with 3rd-party or internal applications."
         },
         {
           "id": "SUP-02",
-          "title": "Question 2"
+          "title": "The system must have full mobile access to RFIs, checklists and access 2D and 3D files."
         },
         {
           "id": "SUP-03",
-          "title": "Question 3"
+          "title": "The system must have training provided."
         }
       ]
     }
