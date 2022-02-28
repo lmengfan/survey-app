@@ -8,9 +8,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import CustomizedTables from'../table';
-import Radio from '@mui/material/Radio';
-import RadioButtons from '../radio';
 import BasicTable from '../result-table';
+import MultipleSelectCheckmarks from '../filter';
 
 //create your forceUpdate hook
 
@@ -78,12 +77,17 @@ function App() {
 
   // Load Logos
   const [logos, setLogos] = useState({});
-
+  const [platforms, setPlatforms] = React.useState([]);
   useEffect(() => {
     const fetchLogos = async () => {
       const rsps = await fetch(modifier + "/logos.json");
       const sLogo = await rsps.json();
+      let platformOptions = [];
       setLogos(sLogo);
+      for (let i = 0, len = sLogo.length; i < len; i++) {
+        platformOptions.push(sLogo[i].col)
+      }
+      setPlatforms(platformOptions)
     };
     fetchLogos();
   }, []);
@@ -94,12 +98,21 @@ function App() {
     setBlockAnswers(childData)
   }
 
+  const [filterValues, setFilterValues] = React.useState([]);
+  const handleFilterChange = (childData) => {
+    setFilterValues(childData)
+    console.log(childData)
+  };
+
   const [va, setValue] = useState(0); // integer state
   const [visible, setVisible] = useState(false);  // result visibility state
   const handleSubmit = (event) => {
     setVisible(true)
     setValue(va => va + 1)
+    setFilterValues(filterValues)
   };
+
+
 
   return (
     <BrowserRouter basename = {process.env.PUBLIC_URL}>
@@ -109,6 +122,7 @@ function App() {
                 <h1 id="title">PMIS Selection Tool</h1>
                 <p id="description">Thank You For Taking Your Time To Give Us FeedBack</p>
             </header>
+            
             <Box
               sx={{
                 display: 'flex',
@@ -116,7 +130,7 @@ function App() {
                 '& > :not(style)': { m: 1 },
               }}>
               <TextField
-                helperText="Please enter your name"
+                helperText="Please project name"
                 id="demo-helper-text-aligned"
                 label="Project Name"
               />
@@ -126,9 +140,10 @@ function App() {
             
           </main>
           {visible && 
-          <result>
-            <BasicTable columnhead={logos} section ={allSections} rowdata={blockAnswers} />
-          </result>}
+          <section>
+            <MultipleSelectCheckmarks platforms={platforms} handleChange={handleFilterChange}></MultipleSelectCheckmarks>
+            <BasicTable filters={filterValues} columnhead={logos} section ={allSections} rowdata={blockAnswers} />
+          </section>}
     </BrowserRouter>
   );
 }

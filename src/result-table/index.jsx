@@ -16,6 +16,7 @@ import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import "./styles.css";
 import { StyledEngineProvider } from '@mui/material/styles';
+import { Filter } from '@mui/icons-material';
 
 const customTheme = createTheme({
   palette: {
@@ -38,7 +39,7 @@ function CircularProgressWithLabel(props) {
   if(Math.round(props.value) < 33){
     circleColor = "error"}
   else if(Math.round(props.value) < 66){ 
-    circleColor = "error"
+    circleColor = "warning"
   }
   else{
     circleColor="success" 
@@ -197,32 +198,41 @@ export default function BasicTable(props) {
   let winnerScore = 0;
   sum.set("name", "Total");
 
+  let headers = []
+  console.log(props.filters)
   for (let i = 0, len = props.columnhead.length; i < len; i++) {
-    let platform = props.columnhead[i].col
-    let total = 0
-    const scores = Array.from(props.rowdata.values())
-    for (let i = 0, len = scores.length; i < len; i++) {
-      total += scores[i].overall.get(platform)
-    }
-    sum.set(platform, total)
-    if(total > winnerScore){
-      winner = platform
-      winnerScore = total
+    
+      let platform = props.columnhead[i].col
+      if(props.filters.includes(platform)){
+      headers.push(props.columnhead[i])
+      let total = 0
+      const scores = Array.from(props.rowdata.values())
+      for (let i = 0, len = scores.length; i < len; i++) {
+        total += scores[i].overall.get(platform)
+      }
+      sum.set(platform, total)
+      if(total > winnerScore){
+        winner = platform
+        winnerScore = total
+      }
     }
   }
   footer.push(Object.fromEntries(sum))
+  console.log(footer)
   //rows.push(Object.fromEntries(sum))
-  console.log("Winner" + winner)
+  console.log("Winner: " + winner)
   //console.log(rows)
   return (
-    
       <TableContainer component={Paper}>
-      <Table sx={{ minwidth: 850, maxHeight: 200}} aria-label="simple table">
+      <Table sx={{ minwidth: 880, maxHeight: 200}} aria-label="simple table">
         <TableHead>
           <TableRow >
             <NormalCell style={{ width: 160 }}>Sections</NormalCell>
-            {props.columnhead.map((column) => (
+            {/* {props.columnhead.map((column) => (
               <Head column={column} winner={winner}/>
+          ))} */}
+            {headers.map((column) => (
+              <Head key={column.col} column={column} winner={winner}/>
           ))}
           </TableRow>
         </TableHead>
@@ -232,8 +242,11 @@ export default function BasicTable(props) {
               <NormalCell style={{ width: 160 }} scope="row">
                 {row.name}
               </NormalCell>
-              {props.columnhead.map((column) => (
-                <Body column={column} row={row} winner={winner}/>
+              {/* {props.columnhead.map((column) => (
+                <Body key= {column.name} column={column} row={row} winner={winner}/>
+              ))} */}
+              {headers.map((column) => (
+                <Body key= {column.col} column={column} row={row} winner={winner}/>
               ))}
             </TableRow>
           ))}
@@ -245,9 +258,12 @@ export default function BasicTable(props) {
               <NormalCell scope="row">
                 {foot.name}
               </NormalCell>
-              {props.columnhead.map((column) => (
-                <Foot column={column} row={foot} winner={winner}/>
+              {headers.map((column) => (
+                <Foot key={column.col} column={column} row={foot} winner={winner}/>
               ))}
+              {/* {headers.columnhead.map((column) => (
+                <Foot column={column} row={foot} winner={winner}/>
+              ))} */}
             </TableRow>
           ))}
         </TableFooter>

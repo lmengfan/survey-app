@@ -3470,5 +3470,254 @@
         "{FullPath}": "Lists/Solutions/14_.000",
         "{HasAttachments}": false,
         "{VersionNumber}": "31.0"
+    },
+    {
+        "@odata.etag": "\"1\"",
+        "ItemInternalId": "16",
+        "ID": 16,
+        "Title": "Kahua",
+        "PMC-01":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "PMC-01#Id": 1,
+        "PMC-02":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "PMC-02#Id": 1,
+        "PMC-03":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "PMC-03#Id": 1,
+        "PMC-04":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "PMC-04#Id": 1,
+        "PMC-05":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 2,
+            "Value": "Medium to implement"
+        },
+        "PMC-05#Id": 2,
+        "DCR-01":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "DCR-01#Id": 1,
+        "DCR-02":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to Implement"
+        },
+        "DCR-02#Id": 1,
+        "CC-01":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 0,
+            "Value": "Impossible"
+        },
+        "CC-01#Id": 0,
+        "CC-02":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 0,
+            "Value": "Impossible"
+        },
+        "CC-02#Id": 0,
+        "CC-03":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 0,
+            "Value": "Impossible"
+        },
+        "CC-03#Id": 0,
+        "CM-01":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "CM-01#Id": 1,
+        "CM-02":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to Implement"
+        },
+        "CM-02#Id": 1,
+        "CM-03":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to Implement"
+        },
+        "CM-03#Id": 1,
+        "CM-04":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to Implement"
+        },
+        "CM-04#Id": 1,
+        "CM-05":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to Implement"
+        },
+        "CM-05#Id": 1,
+        "RD-01":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "RD-01#Id": 1,
+        "RD-02":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "RD-02#Id": 1,
+        "QSM-01":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "QSM-01#Id": 1,
+        "QSM-02":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 3,
+            "Value": "Easy to implement"
+        },
+        "QSM-02#Id": 3,
+        "QSM-03":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "QSM-03#Id": 1,
+        "SC-01":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "SC-01#Id": 1,
+        "SC-02":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "SC-02#Id": 1,
+        "SC-03":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "SC-03#Id": 1,
+        "SC-04":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "SC-04#Id": 1,
+        "SC-05":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 3,
+            "Value": "Easy to implement"
+        },
+        "SC-05#Id": 3,
+        "SC-06":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to Implement"
+        },
+        "SC-06#Id": 1,
+        "SUP-01":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to implement"
+        },
+        "SUP-01#Id": 1,
+        "SUP-02":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 1,
+            "Value": "Hard to Implement"
+        },
+        "SUP-02#Id": 1,
+        "SUP-03":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+            "Id": 2,
+            "Value": "Medium to implement"
+        },
+        "SUP-03#Id": 2,
+        "Modified": "2022-02-24T19:44:08Z",
+        "Created": "2022-02-24T19:44:08Z",
+        "Author":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+            "Claims": "i:0#.f|membership|mengfan.lou@turntown.com",
+            "DisplayName": "Mengfan Lou",
+            "Email": "Mengfan.Lou@turntown.com",
+            "Picture": "https://turntown.sharepoint.com/sites/Technology-Americas/PMIS/_layouts/15/UserPhoto.aspx?Size=L&AccountName=Mengfan.Lou@turntown.com",
+            "Department": "North America\\USA\\Real Estate New York",
+            "JobTitle": "Consultant, BIM & Technology"
+        },
+        "Author#Claims": "i:0#.f|membership|mengfan.lou@turntown.com",
+        "Editor":
+        {
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+            "Claims": "i:0#.f|membership|mengfan.lou@turntown.com",
+            "DisplayName": "Mengfan Lou",
+            "Email": "Mengfan.Lou@turntown.com",
+            "Picture": "https://turntown.sharepoint.com/sites/Technology-Americas/PMIS/_layouts/15/UserPhoto.aspx?Size=L&AccountName=Mengfan.Lou@turntown.com",
+            "Department": "North America\\USA\\Real Estate New York",
+            "JobTitle": "Consultant, BIM & Technology"
+        },
+        "Editor#Claims": "i:0#.f|membership|mengfan.lou@turntown.com",
+        "{Identifier}": "Lists%252fSolutions%252f16_.000",
+        "{IsFolder}": false,
+        "{Thumbnail}":
+        {
+            "Large": null,
+            "Medium": null,
+            "Small": null
+        },
+        "{Link}": "https://turntown.sharepoint.com/sites/Technology-Americas/PMIS/_layouts/15/listform.aspx?PageType=4&ListId=0f12137e%2D8aba%2D4a89%2Dbdf6%2Da364093159d8&ID=16&ContentTypeID=0x0100E99F350BEF605E4AAA9F7504EBF1A45F00F8E7AAAC7CA33348B97106F905D14DB6",
+        "{Name}": "Kahua",
+        "{FilenameWithExtension}": "Kahua",
+        "{Path}": "Lists/Solutions/",
+        "{FullPath}": "Lists/Solutions/16_.000",
+        "{HasAttachments}": false,
+        "{VersionNumber}": "1.0"
     }
+    
 ]
